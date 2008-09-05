@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'AudioJoiner' target in the 'AudioJoiner' project.
+//
+
+#ifdef __OBJC__
+    #import <Foundation/Foundation.h>
+#endif
