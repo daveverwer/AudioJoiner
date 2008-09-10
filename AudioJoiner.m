@@ -4,12 +4,8 @@
 int main (int argc, const char * argv[]) {
   NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];
   
-  NSString *outputFile = @"../../blackmessiah.m4a";
-  NSMutableArray *inputFiles = [NSMutableArray arrayWithObjects:
-                                @"../../blackmessiahintroduction.m4a",
-                                @"../../blackmessiahlineup.m4a",
-                                @"../../blackmessiahdiscography.m4a",
-                                nil];
+  NSString *outputFile = @"../../helloworld.m4a";
+  NSMutableArray *inputFiles = [NSMutableArray arrayWithObjects:@"../../file1.m4a", @"../../file2.m4a", @"../../file3.m4a", nil];
   
   // Get the working file name from the list of files
   NSString *firstInputFile = [inputFiles objectAtIndex:0];
@@ -60,7 +56,6 @@ int main (int argc, const char * argv[]) {
   // Reload the file to check for chapter markers
   QTMovie *reloadedTrack = [QTMovie movieWithFile:outputFile error:nil];
   NSLog(@"Reloaded Track Chapters\n%@", [reloadedTrack chapters]);
-  NSLog(@"Reloaded Track Tracks\n%@", [reloadedTrack tracks]);
 
   [pool drain];
   return 0;
